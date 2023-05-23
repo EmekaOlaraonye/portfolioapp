@@ -6,82 +6,274 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-  font-family: 'Poppins',sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-    
-}
-li {
-    float: right;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif
+        }
 
-}
-li a {
-    display: block;
-    color:#666;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-}
-li a:hover:not(.active){
-    background-color:rgb(255, 245, 240);
-}
-li a.active{
-    color: white;
-    background-color:rgb(255, 245, 240)
-}
-img {
-    display: flexbox;
-    height: 600px;
-    width: 600px;
-    ;
-}
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
 
-</style>
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 600;
+            cursor: default;
+            color: #000;
+        }
+
+        .navbar a {
+            color: #000;
+            font-size: 1.7rem;
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: orangered;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background: transparent;
+            border: .2rem solid var(#00000070);
+            border-radius: 50%;
+            font-size: 2rem;
+            color: black;
+            margin: 3rem 1.5rem 3rem 0;
+            transition: .5s ease;
+        }
+
+        .social-media a:hover {
+            background: orangered;
+            color: white;
+            box-shadow: 0 0 1rem var(#000)
+        }
+
+        .home-img {
+            height: 600px;
+            width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background: orangered;
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem orange;
+            font-size: 1.6rem;
+            color: white;
+            letter-spacing: .1rem;
+            font-weight: 600;
+        }
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+           
+            
+        }
+
+        .about-img {
+            width: 35vw;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+        }
+        .about-content span 
+        {
+            color: orangered;
+        }
+        .about-content h2 {
+            text-align: left;
+            line-height: 1.2;
+        }
+        .about-content h3 {
+            font-size: 2.6rem;
+        }
+        .about-content p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+        }
+        .skills-content span
+        {
+            color: orangered;
+        }
+        .skills h2 {
+            margin-bottom: 5rem;
+        }
+        .skills-container .skills-box{
+            flex: 1 1 30rem;;
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid;
+            transition: .5s ease;
+            
+        }
+        .skills-container .skills-box:hover {
+            border-color: orangered;
+            transform: scale(1.02);
+        }
+        .skills-box i {
+            font-size: 7rem;
+            color: orangered;
+        }
+        .skills-box h3 {
+            font-size: 2.6rem;
+        }
+        .skills-box p {
+            font-size: 1.6rem;
+            margin: 1rem 0 3rem;
+        }
+        .projects-content span{
+            color: orangered;
+        }
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-    <ul>
-        <li> <a href="#skills">Skills </a> </li>
-        <li> <a href="#conact">Contact</a></li>
-        <li> <a href="#about">About </a></li>
-        <li> <a href="#home"> Home</a> </li>
-    </ul>
+    <header class="header">
+        <a href="#" class="logo"> Portfolio </a>
 
-    
+        <nav class="navbar">
+            <a href="#Projects">Projects </a>
+            <a href="#skills">Skills </a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About </a>
+            <a href="#home" class="active"> Home</a>
+        </nav>
+    </header>
+
+
     <!--Home Section-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Chukwuemeka Olaraonye</h1>
+            <h1>An Aspiring Machine Learning Engineer</h1>
+            <h2>Please browse through my portfolio and let me know when and where you need me</h2>
 
-    <h1> I am Chukwuemeka Olaraonye</h1> 
-    <h2> and I am an Machine Learning Enthusiast</h2>
-    <img align="right" src="profile.png">
-
-
-    <button style= "     padding: 10px;
-    border-radius: 10px;
-    background-color:orange ;
-    color: white;" >Check My CV</button>
-
-
-    <!--Contact Section-->
-
-
-    <!--Skills Section-->
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"> <i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i> </a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i> </a>
+            </div>
+            <a href="#" class="btn"> Download CV </a>
+        </div>
+        <div class="home-img">
+            <img src="profile.png">
+        </div>
+    </section>
 
 
     <!--About Section-->
-    
-</body>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="profile.png">
+        </div>
 
+        <div class="about-content">
+            <h2 class="heading">About<span>Me</span></h2>
+            <h3> Machine Learning Enthusiast</h3>
+            <p>A proactive BSc Computer Science and software engineering student a
+                the University of Botswana International University of Science and Technology with solid academic
+                achievements and volunteering experience. Possess strong leadership and communication with
+                fluency in English keen to pursue a role in professional services. I possess proficiency
+                in most programming languages like Java, C++, C# and some website construction languages
+                like CSS, HTML and Javascript and I participated in numerous group projects. I can also
+                collaborate with a team efficiently to complete the tasks at hand.</p>
+                <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+ 
+    <!--Skills Section-->
+    <section class="skills" id="skills">
+        <div class="skills-content">
+        <h2 class="heading">My<span>Skills</span><h2></h2>
+
+    <div class="skills-container">
+        <div class="skills-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>This encjshdfdjkshfsfjhksdfsjhgfhjksdgfjhksdghh
+                asdhgasjhdgasdgaskjdgaskjdgasjkd
+                asdasdasdasd
+            </p>
+            <a href="#" class="btn">Read More </a>
+        </div>
+        <div class="skills-box">
+            <i class='bx bxl-android' ></i>
+            <h3>App Development</h3>
+            <p>Th
+            </p>
+            <a href="#" class="btn">Read More </a>
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    <!--Portfolio Section-->
+    <section class=" portfolio" id="portfolio">
+        <div class="projects-content">
+        <h2 class="heading">Latest<span>Projects</span></h2>
+        </div>
+    </section>
+    
+    <!--Contact Section-->
+
+
+   
+</body>
 </html>
