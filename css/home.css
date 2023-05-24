@@ -9,8 +9,8 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Raleway', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
 }
 
 html {
@@ -33,7 +33,7 @@ html {
 .logo {
     font-size: 2.5rem;
     font-weight: 600;
-    cursor:grab;
+    cursor: grab;
     color: #000;
 }
 
@@ -174,7 +174,7 @@ section {
     transition: .5s ease;
     display: inline-block;
     margin: 10px;
-    
+
 
 
 }
@@ -202,6 +202,12 @@ section {
     color: orangered;
 }
 
+.me-img {
+
+    border-radius: 30px;
+    border: .2rem solid;
+
+}
 
 .footer {
     display: flex;
