@@ -67,9 +67,18 @@
         }
 
         .home-content h1 {
-            font-size: 3.2rem;
+            font-size: 5.2rem;
             font-weight: 700;
 
+        }
+
+        .home-content h2 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+        .home-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .social-media a {
@@ -148,13 +157,21 @@
         .skills h2 {
             margin-bottom: 5rem;
         }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
         .skills-container .skills-box{
-            flex: 1 1 30rem;;
+            flex: 1 1 30rem;
             padding: 3rem 2rem 4rem;
             border-radius: 2rem;
             text-align: center;
             border: .2rem solid;
             transition: .5s ease;
+            display: inline-block;
+
             
         }
         .skills-container .skills-box:hover {
@@ -243,11 +260,11 @@
         <a href="#" class="logo"> Portfolio </a>
 
         <nav class="navbar">
-            <a href="#Projects">Projects </a>
-            <a href="#skills">Skills </a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About </a>
             <a href="#home" class="active"> Home</a>
+            <a href="#about">About </a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Projects </a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -256,9 +273,9 @@
     <section class="home" id="home">
         <div class="home-content">
             <h1>Chukwuemeka Olaraonye</h1>
-            <h1>An Aspiring Machine Learning Engineer</h1>
-            <h2>Please browse through my portfolio and let me know when and where you need me</h2>
+            <h2>An Aspiring Machine Learning Engineer</h2>
 
+            
             <div class="social-media">
                 <a href="#"><i class='bx bxl-facebook'></i></a>
                 <a href="#"> <i class='bx bxl-twitter'></i></a>
@@ -303,17 +320,20 @@
         <div class="skills-box">
             <i class='bx bx-code-alt'></i>
             <h3>Web Development</h3>
-            <p>This encjshdfdjkshfsfjhksdfsjhgfhjksdgfjhksdghh
-                asdhgasjhdgasdgaskjdgaskjdgasjkd
-                asdasdasdasd
+            <p>
             </p>
             <a href="#" class="btn">Read More </a>
         </div>
         <div class="skills-box">
             <i class='bx bxl-android' ></i>
             <h3>App Development</h3>
-            <p>Th
-            </p>
+            <p></p>
+            <a href="#" class="btn">Read More </a>
+        </div>
+        <div class="skills-box">
+            <i class='bx bx-group'></i>
+            <h3>Communication</h3>
+            <p></p>
             <a href="#" class="btn">Read More </a>
         </div>
     </div>
