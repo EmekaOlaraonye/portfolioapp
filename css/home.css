@@ -214,7 +214,9 @@ section {
   .me-img img {
     border-radius: 50%;
     max-width: 100%;
-    height: auto;
+    height: 700px;
+    border-color: orangered;
+    border-style:groove;
     
   }
   
